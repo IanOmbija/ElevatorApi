@@ -1,0 +1,23 @@
+DROP  TABLE IF EXISTS ELEVATOR;
+DROP  TABLE IF EXISTS ELEVATOR_EVENT;
+DROP  TABLE IF EXISTS SQL_QUERY_LOG;
+
+
+CREATE TABLE elevator (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  current_floor INT,
+  directions INT,
+  status INT
+);
+
+CREATE TABLE elevator_event (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  event VARCHAR(255),
+  floor INT
+);
+
+CREATE TABLE sql_query_log (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  query VARCHAR(255),
+  source VARCHAR(255)
+);
